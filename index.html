@@ -1,289 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manik | Web Developer</title>
+  <title>Manik Verma | Web Developer & AI SaaS Builder</title>
+  <meta name="description" content="Official portfolio of Manik Verma — Web Developer, AI SaaS Builder, UI Creator and future-ready digital product creator." />
+  <meta name="keywords" content="Manik Verma, web developer, portfolio website, AI SaaS developer, frontend developer, UI designer, freelance web developer, India developer" />
+  <meta name="author" content="Manik Verma" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://manikstudio.netlify.app/" />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Manik Verma | Web Developer & AI SaaS Builder" />
+  <meta property="og:description" content="Explore the official developer portfolio of Manik Verma — modern websites, AI SaaS ideas, premium UI and client-ready web projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://manikstudio.netlify.app/" />
+  <meta property="og:image" content="https://manikstudio.netlify.app/images/profile.jpg" />
+  <meta property="og:site_name" content="Manik Studio" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manik Verma | Web Developer & AI SaaS Builder" />
+  <meta name="twitter:description" content="Premium developer portfolio showcasing websites, AI SaaS concepts and creative digital experiences." />
+  <meta name="twitter:image" content="https://manikstudio.netlify.app/images/profile.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg" type="image/jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Manik Verma",
+    "url":"https://manikstudio.netlify.app/",
+    "image":"https://manikstudio.netlify.app/images/profile.jpg",
+    "sameAs":[
+      "https://github.com/ManikVerma119",
+      "https://www.linkedin.com/in/manik-verma-3027653b6"
+    ],
+    "jobTitle":"Web Developer & AI SaaS Builder",
+    "email":"mailto:manikverma00x@gmail.com",
+    "telephone":"+91 9596471518"
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader-ring"></div>
-    <p>Loading Manik.dev...</p>
-  </div>
-
-  <!-- Cursor Glow -->
+  <!-- Background -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
   <div class="cursor-glow"></div>
 
-  <!-- Animated Background -->
-  <div class="bg-blur bg1"></div>
-  <div class="bg-blur bg2"></div>
-  <div class="bg-grid"></div>
-
   <!-- Header -->
-  <header class="header">
-    <nav class="navbar container">
-      <a href="#home" class="brand">
-        <span class="brand-dot"></span>
-        <span>Manik.dev</span>
+  <header class="header glass">
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <span class="logo-dot"></span>
+        <span>Manik Studio</span>
       </a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">◐</button>
-        <button id="menuToggle" class="menu-btn" aria-label="Toggle Menu">☰</button>
+        <a class="btn btn-small btn-outline" href="https://github.com/ManikVerma119" target="_blank">GitHub</a>
+        <button class="menu-btn" id="menuBtn">☰</button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <!-- Hero -->
-  <section id="home" class="hero container">
-    <div class="hero-left">
-      <p class="eyebrow">🚀 Building clean websites & future-ready web apps</p>
+  <section class="hero section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-left reveal">
+        <div class="badge glow-badge">⚡ Ultra Beast Developer Portfolio</div>
+        <h1>
+          I Build
+          <span class="gradient-text">Modern Websites</span>,
+          <span class="gradient-text">AI SaaS Ideas</span>
+          & Premium Digital Experiences
+        </h1>
+        <p class="hero-sub">
+          Hi, I’m <strong>Manik Verma</strong> — a growing web developer focused on
+          <strong>clean UI, strong branding, modern frontend design</strong> and future-ready
+          <strong>AI SaaS products</strong>.
+        </p>
 
-      <h1 class="hero-title">
-        Hi, I’m <span class="gradient-text">Manik</span><br />
-        <span class="spotlight">A Web Developer</span>
-      </h1>
-
-      <p class="hero-sub">
-        I design and build <strong>modern websites</strong>, responsive interfaces,
-        and future <strong>AI-powered products</strong>.
-      </p>
-
-      <div class="typing-wrap">
-        <span class="typing-label">Currently learning:</span>
-        <span id="typingText" class="typing-text"></span>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-secondary">Hire Me</a>
-        <a href="resume.pdf" class="btn btn-outline" download>Download CV</a>
-      </div>
-
-      <div class="mini-stats">
-        <div class="stat-card">
-          <h3>01</h3>
-          <p>Portfolio Built</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Hire / Contact</a>
         </div>
-        <div class="stat-card">
-          <h3>03</h3>
-          <p>Core Skills</p>
-        </div>
-        <div class="stat-card">
-          <h3>∞</h3>
-          <p>Growth Mindset</p>
+
+        <div class="hero-mini-cards">
+          <div class="mini-card glass">
+            <h3>Frontend</h3>
+            <p>Clean, responsive, modern interfaces.</p>
+          </div>
+          <div class="mini-card glass">
+            <h3>AI SaaS</h3>
+            <p>Product-focused thinking for future apps.</p>
+          </div>
+          <div class="mini-card glass">
+            <h3>Freelance Ready</h3>
+            <p>Portfolio built for client trust and growth.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="hero-right">
-      <div class="profile-card">
-        <div class="profile-top">
-          <span class="code-dot red"></span>
-          <span class="code-dot yellow"></span>
-          <span class="code-dot green"></span>
+      <div class="hero-right reveal delay-1">
+        <div class="profile-frame">
+          <div class="profile-ring ring-1"></div>
+          <div class="profile-ring ring-2"></div>
+          <div class="profile-ring ring-3"></div>
+          <div class="profile-card glass">
+            <div class="profile-image-wrap">
+              <img src="images/profile.jpg" alt="Manik Verma Profile Photo" class="profile-image" />
+            </div>
+            <div class="profile-meta">
+              <h3>Manik Verma</h3>
+              <p>Web Developer • AI SaaS Builder</p>
+              <div class="availability">
+                <span class="status-dot"></span> Available for Projects
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="profile-image-wrap">
-          <!-- Apni photo ke liye: images/profile.jpg daal -->
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="Profile" class="profile-image" />
-        </div>
-
-        <div class="code-window">
-<pre><code>&lt;developer name="Manik"&gt;
-  &lt;skill&gt;HTML&lt;/skill&gt;
-  &lt;skill&gt;CSS&lt;/skill&gt;
-  &lt;skill&gt;JavaScript&lt;/skill&gt;
-  &lt;goal&gt;Build AI SaaS&lt;/goal&gt;
-&lt;/developer&gt;
-</code></pre>
-        </div>
-
-        <div class="floating-badge badge-one">Responsive UI</div>
-        <div class="floating-badge badge-two">Clean Code</div>
       </div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <section class="marquee-section">
-    <div class="marquee-track">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Responsive Design</span>
-      <span>UI / UX</span>
-      <span>Future React</span>
-      <span>AI SaaS</span>
-      <span>Frontend</span>
-      <span>Clean Layouts</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Responsive Design</span>
-      <span>UI / UX</span>
-      <span>Future React</span>
-      <span>AI SaaS</span>
-      <span>Frontend</span>
-      <span>Clean Layouts</span>
+  <!-- Stats -->
+  <section class="stats section-sm">
+    <div class="container stats-grid">
+      <div class="stat-card glass reveal">
+        <h2 class="counter" data-target="4">0</h2>
+        <p>Featured Projects</p>
+      </div>
+      <div class="stat-card glass reveal delay-1">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Future SaaS / Web Ideas</p>
+      </div>
+      <div class="stat-card glass reveal delay-2">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>% Growth Mindset</p>
+      </div>
+      <div class="stat-card glass reveal delay-3">
+        <h2 class="counter" data-target="24">0</h2>
+        <p>/7 Learning Mode</p>
+      </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="section container">
-    <div class="section-head">
-      <p class="section-tag">About</p>
-      <h2>More than just a beginner — I’m building the right way.</h2>
-      <p>
-        I’m starting my web development journey with a focus on
-        <strong>professional UI</strong>, clean structure, and real-world projects.
-        My long-term goal is to create <strong>web products, AI tools, and SaaS apps</strong>.
-      </p>
-    </div>
+  <section class="section" id="about">
+    <div class="container split-grid">
+      <div class="reveal">
+        <span class="section-tag">About Me</span>
+        <h2>Building a Strong Developer Identity</h2>
+        <p>
+          I’m building myself as a <strong>professional web developer</strong> with a sharp focus on
+          <strong>portfolio websites, premium landing pages, UI design, and future AI SaaS products</strong>.
+        </p>
+        <p>
+          My goal is simple: create digital work that looks <strong>clean, modern, trustworthy and powerful</strong>.
+          This portfolio is not just a website — it’s the foundation of my future freelance and product journey.
+        </p>
+      </div>
 
-    <div class="about-grid">
-      <div class="glass-card">
-        <h3>What I’m Doing</h3>
-        <p>Learning frontend deeply and building projects that look modern and feel useful.</p>
-      </div>
-      <div class="glass-card">
-        <h3>What I Want</h3>
-        <p>To become a strong web developer and eventually build products people actually use.</p>
-      </div>
-      <div class="glass-card">
-        <h3>How I Work</h3>
-        <p>By learning one concept, applying it immediately, and improving through real projects.</p>
+      <div class="glass about-box reveal delay-1">
+        <h3>What I’m Growing Into</h3>
+        <ul class="feature-list">
+          <li>⚡ Premium Frontend Web Developer</li>
+          <li>⚡ AI SaaS Product Builder</li>
+          <li>⚡ Modern UI / UX Creator</li>
+          <li>⚡ Client Website Creator</li>
+          <li>⚡ Digital Brand Builder</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section container">
-    <div class="section-head">
-      <p class="section-tag">Skills</p>
-      <h2>My current stack</h2>
-    </div>
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Skills</span>
+        <h2>Tech Stack & Creative Strengths</h2>
+      </div>
 
-    <div class="skills-wrap">
-      <div class="skill-pill">HTML</div>
-      <div class="skill-pill">CSS</div>
-      <div class="skill-pill">JavaScript</div>
-      <div class="skill-pill">Responsive Design</div>
-      <div class="skill-pill">Modern UI</div>
-      <div class="skill-pill">GitHub (Learning)</div>
-      <div class="skill-pill">React (Coming Soon)</div>
-      <div class="skill-pill">Node.js (Coming Soon)</div>
+      <div class="skills-grid">
+        <div class="skill-card glass reveal">
+          <h3>Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, responsive layouts, modern web structure.</p>
+          <div class="progress-bar"><span style="width: 88%"></span></div>
+        </div>
+
+        <div class="skill-card glass reveal delay-1">
+          <h3>UI / Visual Design</h3>
+          <p>Clean interfaces, premium cards, modern portfolio styling and branding.</p>
+          <div class="progress-bar"><span style="width: 84%"></span></div>
+        </div>
+
+        <div class="skill-card glass reveal delay-2">
+          <h3>AI SaaS Thinking</h3>
+          <p>Product ideas, AI-first web tools, user-focused SaaS structure and concepts.</p>
+          <div class="progress-bar"><span style="width: 80%"></span></div>
+        </div>
+
+        <div class="skill-card glass reveal delay-3">
+          <h3>Freelance Readiness</h3>
+          <p>Landing pages, client websites, business presentation and digital trust-building.</p>
+          <div class="progress-bar"><span style="width: 82%"></span></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section container">
-    <div class="section-head">
-      <p class="section-tag">Projects</p>
-      <h2>Things I’m building</h2>
-    </div>
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Projects</span>
+        <h2>Featured Build Showcase</h2>
+        <p class="section-sub">A strong developer is not just a coder — he’s a builder.</p>
+      </div>
 
-    <div class="projects-grid">
-      <article class="project-card">
-        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop" alt="Portfolio Project" class="project-image" />
-        <div class="project-top">
-          <span class="project-badge">LIVE START</span>
-          <h3>Personal Portfolio</h3>
-        </div>
-        <p>A professional personal website to showcase my work, goals, and projects.</p>
-        <a href="#" class="project-link">Project Preview →</a>
-      </article>
+      <div class="project-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="saas">AI SaaS</button>
+        <button class="filter-btn" data-filter="creative">Creative</button>
+      </div>
 
-      <article class="project-card">
-        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="Business Landing Page" class="project-image" />
-        <div class="project-top">
-          <span class="project-badge">NEXT</span>
-          <h3>Business Landing Page</h3>
-        </div>
-        <p>A modern website layout for businesses like gyms, coaching centers, and local brands.</p>
-        <a href="#" class="project-link">Project Preview →</a>
-      </article>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card glass reveal project-item" data-category="web">
+          <div class="project-image-wrap">
+            <img src="images/portfolio-project.jpg" alt="Portfolio Developer Project" class="project-image" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Portfolio</span>
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              A premium developer identity website designed to showcase skills, trust,
+              branding, contact presence and future opportunities.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
 
-      <article class="project-card featured-project">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="AI SaaS Web App" class="project-image" />
-        <div class="project-top">
-          <span class="project-badge glow-badge">FUTURE BUILD</span>
-          <h3>AI SaaS Web App</h3>
-        </div>
-        <p>A future-ready AI product where users can interact with smart tools online.</p>
-        <a href="#" class="project-link">Project Preview →</a>
-      </article>
+        <!-- Project 2 -->
+        <article class="project-card glass reveal delay-1 project-item" data-category="saas">
+          <div class="project-image-wrap">
+            <img src="images/saas-project.jpg" alt="AI SaaS App Developer Project" class="project-image" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">AI SaaS</span>
+            <h3>AI SaaS App Developer</h3>
+            <p>
+              A future-ready AI SaaS concept focused on smart user experience,
+              modern dashboards and scalable product direction.
+            </p>
+            <div class="project-tech">
+              <span>AI Concept</span>
+              <span>SaaS UI</span>
+              <span>Product Vision</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass reveal delay-2 project-item" data-category="web">
+          <div class="project-image-wrap">
+            <img src="images/client-project.jpg" alt="Client Website Creator Project" class="project-image" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Client Build</span>
+            <h3>Upcoming Client Website</h3>
+            <p>
+              A professional business-ready web presence crafted for trust,
+              clean design, clear communication and conversion-focused layout.
+            </p>
+            <div class="project-tech">
+              <span>Business Site</span>
+              <span>Modern Layout</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card glass reveal delay-3 project-item" data-category="creative">
+          <div class="project-image-wrap">
+            <img src="images/creative-project.jpg" alt="Creative UI Experimenter Project" class="project-image" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Creative UI</span>
+            <h3>Creative Dev Experiments</h3>
+            <p>
+              Interface experiments exploring visual systems, futuristic interactions,
+              micro animations and standout design direction.
+            </p>
+            <div class="project-tech">
+              <span>UI</span>
+              <span>Effects</span>
+              <span>Creative Frontend</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- Philosophy -->
-  <section class="section container">
-    <div class="philosophy-card">
-      <p class="section-tag">Code Philosophy</p>
-      <h2>“Clean design. Sharp logic. Real purpose.”</h2>
-      <p>
-        I don’t want to just make websites that exist.  
-        I want to build websites that feel <strong>premium, useful, and memorable</strong>.
-      </p>
+  <!-- Timeline -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Journey</span>
+        <h2>Developer Growth Timeline</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item glass reveal">
+          <span class="timeline-dot"></span>
+          <h3>Step 01 — Foundation Started</h3>
+          <p>Started learning how websites actually work from structure to visual presentation.</p>
+        </div>
+
+        <div class="timeline-item glass reveal delay-1">
+          <span class="timeline-dot"></span>
+          <h3>Step 02 — Portfolio Identity Built</h3>
+          <p>Created a strong personal portfolio to establish online trust and developer presence.</p>
+        </div>
+
+        <div class="timeline-item glass reveal delay-2">
+          <span class="timeline-dot"></span>
+          <h3>Step 03 — Client & SaaS Direction</h3>
+          <p>Shifted focus from basic websites to client work, premium interfaces and AI SaaS possibilities.</p>
+        </div>
+
+        <div class="timeline-item glass reveal delay-3">
+          <span class="timeline-dot"></span>
+          <h3>Step 04 — Future Scaling</h3>
+          <p>Next phase: advanced projects, product systems, stronger web apps and monetizable digital work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hire Me -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Why Work With Me</span>
+        <h2>Professional Value I Bring</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card glass reveal">
+          <h3>Modern Visual Quality</h3>
+          <p>I focus on making websites look clean, premium and trustworthy.</p>
+        </div>
+        <div class="why-card glass reveal delay-1">
+          <h3>Future Product Mindset</h3>
+          <p>I don’t just think page by page — I think in systems, ideas and products.</p>
+        </div>
+        <div class="why-card glass reveal delay-2">
+          <h3>Freelance / Brand Ready</h3>
+          <p>My work is shaped for real-world use, digital identity and online presence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates / Learning -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Learning</span>
+        <h2>Current Growth Focus</h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card glass reveal">
+          <h3>Frontend Mastery</h3>
+          <p>Sharpening HTML, CSS, JavaScript and responsive layout systems.</p>
+        </div>
+        <div class="cert-card glass reveal delay-1">
+          <h3>AI SaaS Product Building</h3>
+          <p>Understanding how modern AI tools become usable and monetizable products.</p>
+        </div>
+        <div class="cert-card glass reveal delay-2">
+          <h3>UI Systems & Digital Identity</h3>
+          <p>Learning how premium design helps developers stand out online.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section container">
-    <div class="section-head">
-      <p class="section-tag">Contact</p>
-      <h2>Let’s connect</h2>
-      <p>If you want a website, collaboration, or just want to see my journey — reach out.</p>
-    </div>
-
-    <div class="contact-grid">
-      <a href="mailto:yourname@email.com" class="contact-box">
-        <h3>Email</h3>
-        <p>yourname@email.com</p>
-      </a>
-
-      <a href="#" class="contact-box">
-        <h3>Instagram</h3>
-        <p>@yourhandle</p>
-      </a>
-
-      <a href="#" class="contact-box">
-        <h3>GitHub</h3>
-        <p>github.com/yourusername</p>
-      </a>
-    </div>
-
-    <!-- Contact Form -->
-    <form class="contact-form" onsubmit="return false;">
-      <div class="form-grid">
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Contact</span>
+        <h2>Let’s Build Something Strong</h2>
+        <p class="section-sub">Open for collaborations, portfolio growth and future digital projects.</p>
       </div>
-      <textarea rows="6" placeholder="Your Message"></textarea>
-      <button class="btn btn-primary" type="submit">Send Message</button>
-    </form>
+
+      <div class="contact-grid">
+        <div class="contact-info glass reveal">
+          <h3>Contact Info</h3>
+          <div class="contact-list">
+            <a href="mailto:manikverma00x@gmail.com">📧 manikverma00x@gmail.com</a>
+            <a href="tel:+919596471518">📞 +91 9596471518</a>
+            <a href="https://wa.me/919596471518" target="_blank">💬 WhatsApp</a>
+            <a href="https://github.com/ManikVerma119" target="_blank">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/manik-verma-3027653b6" target="_blank">🔗 LinkedIn</a>
+            <a href="https://manikstudio.netlify.app" target="_blank">🌐 Live Website</a>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal delay-1" action="https://formspree.io/f/xdapdkkd" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
+          <button type="submit" class="btn btn-primary full-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 Manik — Designed with ambition, built with code.</p>
+    <div class="container footer-wrap">
+      <p>© 2026 Manik Verma • Built with focus, growth and future ambition.</p>
+      <div class="footer-links">
+        <a href="https://github.com/ManikVerma119" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/manik-verma-3027653b6" target="_blank">LinkedIn</a>
+        <a href="https://wa.me/919596471518" target="_blank">WhatsApp</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
