@@ -1,102 +1,98 @@
-console.log("Manik Portfolio Ultra Premium Loaded 🚀");
-
-// Preloader
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  setTimeout(() => {
-    preloader.style.opacity = "0";
-    preloader.style.visibility = "hidden";
-    preloader.style.transition = "all 0.5s ease";
-  }, 700);
-});
-
-// Typing effect
-const typingText = document.getElementById("typingText");
-const words = [
-  "HTML & CSS",
-  "JavaScript Basics",
-  "Responsive Websites",
-  "Modern UI Design",
-  "Future React Projects",
-  "AI SaaS Vision"
-];
-
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function typeEffect() {
-  const currentWord = words[wordIndex];
-
-  if (!deleting) {
-    typingText.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === currentWord.length) {
-      deleting = true;
-      setTimeout(typeEffect, 1200);
-      return;
-    }
-  } else {
-    typingText.textContent = currentWord.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      deleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-    }
-  }
-
-  setTimeout(typeEffect, deleting ? 55 : 95);
-}
-typeEffect();
-
-// Theme toggle
-const themeToggle = document.getElementById("themeToggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-});
-
 // Mobile menu
-const menuToggle = document.getElementById("menuToggle");
+const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// Close mobile menu on link click
-document.querySelectorAll("#navLinks a").forEach(link => {
-  link.addEventListener("click", () => navLinks.classList.remove("show"));
-});
-
-// Cursor glow
-const glow = document.querySelector(".cursor-glow");
-window.addEventListener("mousemove", (e) => {
-  glow.style.left = `${e.clientX}px`;
-  glow.style.top = `${e.clientY}px`;
+// Auto close nav on click
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
 });
 
 // Reveal on scroll
-const revealElements = document.querySelectorAll(
-  ".glass-card, .project-card, .contact-box, .stat-card, .skill-pill, .philosophy-card, .contact-form, .profile-card"
-);
+const revealElements = document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+const revealOnScroll = () => {
+  revealElements.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const top = el.getBoundingClientRect().top;
+
+    if (top < windowHeight - 80) {
+      el.classList.add("active");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+// Counter animation
+const counters = document.querySelectorAll(".counter");
+let counterStarted = false;
+
+function animateCounters() {
+  if (counterStarted) return;
+
+  const statsSection = document.querySelector(".stats");
+  const rect = statsSection.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight - 100) {
+    counterStarted = true;
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const speed = target / 60;
+
+      const updateCount = () => {
+        count += speed;
+        if (count < target) {
+          counter.innerText = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  }
+}
+
+window.addEventListener("scroll", animateCounters);
+window.addEventListener("load", animateCounters);
+
+// Project filter
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectItems = document.querySelectorAll(".project-item");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".filter-btn.active").classList.remove("active");
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    projectItems.forEach(item => {
+      const category = item.getAttribute("data-category");
+
+      if (filter === "all" || category === filter) {
+        item.classList.remove("hide-project");
+      } else {
+        item.classList.add("hide-project");
       }
     });
-  },
-  { threshold: 0.15 }
-);
+  });
+});
 
-revealElements.forEach((el) => {
-  el.style.opacity = "0";
-  el.style.transform = "translateY(20px)";
-  el.style.transition = "all 0.7s ease";
-  revealObserver.observe(el);
+// Cursor glow
+const cursorGlow = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", (e) => {
+  cursorGlow.style.left = `${e.clientX}px`;
+  cursorGlow.style.top = `${e.clientY}px`;
 });
